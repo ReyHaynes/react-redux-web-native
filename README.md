@@ -26,6 +26,13 @@ This is a `node` based build app so having node installed is an obvious requirem
 ###### Testing
 Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders, any testing you would like to do must be done within `__tests__/<native/web>`.
 
+### FAQ
+
+###### How do I rename the app?
+If you already have the `/ios` & `/android` directories installed, in order to rename the app, delete these directories and run `react-native eject`.
+
+To do this in one command, use `yarn eject:app` or `npm run eject:app`.
+
 ### Additional Options
 
 Commands can be executed with `yarn <options>` or `npm run <options>`
@@ -42,7 +49,7 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 | | |
 | start:app | Start background process for React Native |
 | test:app | Run test watcher for React Native from `/__tests__/native` directory. |
-| eject:app | Build `/ios` & `/android` directories (if deleted). |
+| eject:app | (Re)Build `/ios` & `/android` directories. |
 | | |
 | ios | Run iOS emulator. Similar to `react-native run-ios` |
 | ios:bundle | Bundle with entry file index.js |
