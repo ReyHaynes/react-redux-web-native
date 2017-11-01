@@ -26,6 +26,20 @@ This is a `node` based build app so having node installed is an obvious requirem
 ###### Testing
 Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders, any testing you would like to do must be done within `__tests__/<native/web>`.
 
+###### File Naming
+You will want to separate presentational containers (anything with `render()` for the most part). Since there is no graceful way to determine native and web platform and there is no `.web.js` file extension, presentational containers for the Web should be under the main `.js` file while Native should be under `.ios.js` and `.android.js`.
+
+Please note, that if you are targeting both platforms, you will be **required** to use both file name extensions since it will default to the main file if the extension does not exist.
+
+###### Native Code Sharing
+In the case of having React-Native code that work on both platforms, if you don't want to duplicate the code in 2 files, just import the code from the main targeted platform file.
+
+```javascript
+// src/App.android.js imports the iOS version so there is no need to duplicate code.
+import App from './App.ios'
+export { App as default }
+```
+
 ### FAQ
 
 ###### How do I rename the app?
