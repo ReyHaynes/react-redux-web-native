@@ -65,3 +65,7 @@ buck-out/
 
 # production
 /build
+
+# Sample App Ignores
+android/
+ios/
