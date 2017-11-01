@@ -1,7 +1,7 @@
 React Web Native App
 --------------------
 
-The goal of this build is to create a react web and native app using a shared codebase while keeping the integrity of the `create-react-app` and `react-native` build structure.
+The goal of this build is to create a react web and native app using a shared codebase while keeping the integrity of the `create-react-app` and `react-native` build structure...because, who want's to waste time creating the build process.
 
 ### Quick Start
 
@@ -20,6 +20,11 @@ This is a `node` based build app so having node installed is an obvious requirem
 `react-native` requires you to have the proper emulators installed for your targeted operating system. Check out the [React Native docs at Facebook](https://facebook.github.io/react-native/docs/getting-started.html) to get the install instructions. Make sure to use the instructions under the "Building Projects with Native Code" tab.
 
 (Optional) `npm` is installed with node but I recommend `yarn` package management. Instruction to install Yarn [can be found here](https://yarnpkg.com/en/docs/install).
+
+### Issues / Gotchas
+
+###### Testing
+Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders, any testing you would like to do must be done within `__tests__/<native/web>`.
 
 ### Additional Options
 
