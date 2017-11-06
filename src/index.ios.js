@@ -3,4 +3,4 @@
 import { AppRegistry } from 'react-native';
 import App from './App';
 
-AppRegistry.registerComponent('Hedgeable', () => App);
+AppRegistry.registerComponent('SampleWebNative', () => App);
