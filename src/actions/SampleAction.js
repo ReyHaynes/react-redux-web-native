@@ -18,7 +18,6 @@ const somethingHappens = (payload) => {
         type: payload,
         data: { message: 'Action Success :)' }
       }
-      break;
     default:
       return {
         type: payload,
