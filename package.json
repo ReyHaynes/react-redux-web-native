@@ -28,7 +28,6 @@
 		"android:signer": "cd android/app/build/outputs/apk/ && jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypass android app-release-unsigned.apk androiddebugkey"
 	},
 	"dependencies": {
-		"axios": "^0.17.0",
 		"react": "16.0.0-beta.5",
 		"react-dom": "^16.0.0",
 		"react-native": "0.49.5",
