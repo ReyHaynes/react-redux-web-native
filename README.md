@@ -1,4 +1,4 @@
-React Web Native App
+React + Redux Web Native App
 --------------------
 
 The goal of this build is to create a react web and native app using a shared codebase while keeping the integrity of the `create-react-app` and `react-native` build structure...because, who want's to waste time creating the build process.
@@ -24,7 +24,7 @@ This is a `node` based build app so having node installed is an obvious requirem
 ### Issues / Gotchas
 
 ###### Testing
-Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders, any testing you would like to do must be done within `__tests__/<native/web>`.
+Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders. Code might to be refactored for the fix.
 
 ###### File Naming
 You will want to separate presentational containers (anything with `render()` for the most part). Since there is no graceful way to determine native and web platform and there is no `.web.js` file extension, presentational containers for the Web should be under the main `.js` file while Native should be under `.ios.js` and `.android.js`.
@@ -75,6 +75,13 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 | android:build | Build with a "Release" configuration. |
 | android:signkey | Generate keystore android |
 | android:signer | To sign app-release-unsigned.apk with random keystore |
+
+### Progress:
+- [x] Merge `create-react-app` & `react-native`
+- [x] Create Sample App
+- [x] Implement Redux sample action and reducer
+- [ ] Create sample action buttons 
+- [ ] Unit testing
 
 ### Contribute
 
