@@ -6,7 +6,6 @@ export default class SampleView extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>{this.props.message}</Text>
-        <Text>{this.props.dispatchMessage}</Text>
         <Text>{this.props.label} {this.props.responseAction}</Text>
       </View>
     )

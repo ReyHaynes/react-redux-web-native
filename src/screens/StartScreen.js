@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import SampleAction from '../actions/SampleAction'
+import { SampleAction, SampleActionRunning } from '../actions/SampleAction'
 import SampleView from '../components/SampleView/SampleView'
 
 class StartScreen extends React.Component {
@@ -8,35 +8,34 @@ class StartScreen extends React.Component {
     super(props, context)
 
     this.state = {
-      text: {
-        message: 'Welcome to the app!',
-        dispatchMessage: 'Dispatch an action to:',
-        label: 'Action:'
-      },
-      passActionValue: 1,
-      failActionValue: 0
+      message: 'Welcome to the app!',
+      dispatchMessage: 'Dispatch an action to:',
+      label: 'Action:'
     }
 
-    this.passDispatchedAction = this.passDispatchedAction.bind(this)
-    this.failDispatchedAction = this.failDispatchedAction.bind(this)
+    this.dispatchActionsRunning(true)
+
+    this.dispatchSuccessAction = this.dispatchSuccessAction.bind(this)
+    this.dispatchActionsRunning = this.dispatchActionsRunning.bind(this)
   }
 
   componentDidMount() {
-    setTimeout(this.failDispatchedAction, 1500)
-    setTimeout(this.passDispatchedAction, 3000)
+    setTimeout(() => this.dispatchSuccessAction(false), 1500)
+    setTimeout(() => this.dispatchSuccessAction(true), 3000)
+    setTimeout(() => this.dispatchActionsRunning(false), 3500)
   }
 
-  passDispatchedAction() {
-    this.props.dispatch(SampleAction(this.state.passActionValue))
+  dispatchSuccessAction(action) {
+    this.props.dispatch(SampleAction(action))
   }
 
-  failDispatchedAction() {
-    this.props.dispatch(SampleAction(this.state.failActionValue))
+  dispatchActionsRunning(action) {
+    this.props.dispatch(SampleActionRunning(action))
   }
 
   render() {
     return (
-      <SampleView {...this.state.text} responseAction={this.props.actions.message} />
+      <SampleView {...this.state} responseAction={this.props.actions.message} />
     )
   }
 }
