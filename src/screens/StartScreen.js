@@ -1,7 +1,7 @@
 import React from 'react'
-import { connect } from "react-redux"
+import { connect } from 'react-redux'
 import SampleAction from '../actions/SampleAction'
-import SampleView from '../components/SampleViewComponent'
+import SampleView from '../components/SampleView/SampleView'
 
 class StartScreen extends React.Component {
   constructor(props, context) {
@@ -10,7 +10,8 @@ class StartScreen extends React.Component {
     this.state = {
       text: {
         message: 'Welcome to the app!',
-        dispatchMessage: 'Dispatch an action to:'
+        dispatchMessage: 'Dispatch an action to:',
+        label: 'Action:'
       },
       passActionValue: 1,
       failActionValue: 0
@@ -18,6 +19,11 @@ class StartScreen extends React.Component {
 
     this.passDispatchedAction = this.passDispatchedAction.bind(this)
     this.failDispatchedAction = this.failDispatchedAction.bind(this)
+  }
+
+  componentDidMount() {
+    setTimeout(this.failDispatchedAction, 1500)
+    setTimeout(this.passDispatchedAction, 3000)
   }
 
   passDispatchedAction() {
@@ -30,15 +36,13 @@ class StartScreen extends React.Component {
 
   render() {
     return (
-      <SampleView {...this.state.text} />
+      <SampleView {...this.state.text} responseAction={this.props.actions.message} />
     )
   }
 }
 
-function mapStateToProps(state) {
-  return ({
-    SampleReducer: state.SampleReducer
-  })
-}
+const mapStateToProps = (state) => ({
+    actions: state.SampleReducer
+})
 
 export default connect(mapStateToProps)(StartScreen);

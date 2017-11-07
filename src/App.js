@@ -4,7 +4,7 @@ import store from "./storage"
 import StartScreen from './screens/StartScreen'
 import Routing, { Router } from './routing'
 
-const Route = Routing.Route;
+const Route = Routing.Route
 
 
 export default class App extends React.Component {

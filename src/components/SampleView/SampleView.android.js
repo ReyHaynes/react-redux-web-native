@@ -1,4 +1,4 @@
 // Non Specific Native Bridge
 
-import SampleView from './index.ios'
+import SampleView from './SampleView.ios'
 export { SampleView as default }

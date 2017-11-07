@@ -4,7 +4,7 @@ import {
 } from '../actions'
 
 export default function logReducer(state = { message: 'Waiting for Action...' }, action) {
-    switch (action) {
+    switch (action.type) {
         case SOMETHING_SUCCESSFUL:
             return {
                 ...state,...action.data
