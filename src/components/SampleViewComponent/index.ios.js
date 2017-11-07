@@ -5,7 +5,7 @@ export default class SampleView extends React.Component {
   render() {
     return (
       <View>
-        <Text>Hello World!</Text>
+        <Text>{this.props.message}</Text>
       </View>
     )
   }

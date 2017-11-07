@@ -30,7 +30,7 @@ class StartScreen extends React.Component {
 
   render() {
     return (
-      <SampleView />
+      <SampleView {...this.state.text} />
     )
   }
 }
