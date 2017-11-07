@@ -3,6 +3,8 @@ React + Redux Web Native App
 
 The goal of this build is to create a react web and native app using a shared codebase while keeping the integrity of the `create-react-app` and `react-native` build structure...because, who want's to waste time creating the build process.
 
+![App Preview](https://i.imgur.com/vyLoIxd.png)
+
 ### Quick Start
 
 1. Clone this repo.
@@ -80,7 +82,7 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 - [x] Merge `create-react-app` & `react-native`
 - [x] Create Sample App
 - [x] Implement Redux sample action and reducer
-- [ ] Create sample action buttons 
+- [ ] Create sample action buttons
 - [ ] Unit testing
 
 ### Contribute
