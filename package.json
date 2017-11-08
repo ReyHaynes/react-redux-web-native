@@ -8,14 +8,13 @@
 		"start": "echo '\"start\" script has been replaced with \"start:web\" & \"start:app\"'",
 		"build": "echo '\"build\" script has been replaced with \"build:web\"'",
 		"eject": "echo '\"eject\" script has been replaced with \"eject:web\" & \"eject:app\"'",
-		"install": "yarn eject:app",
-		"test": "CI=true yarn test:web && CI=true yarn test:app",
+		"test": "yarn test:web && yarn test:app",
 		"start:web": "react-scripts start",
 		"build:web": "react-scripts build",
-		"test:web": "react-scripts test --env=jsdom --testMatch '<rootDir>/__tests__/web/**/*.js?(x)'",
+		"test:web": "jest --env=jsdom  --testMatch='<rootDir>/__tests__/web/**/*.js?(x)'",
 		"eject:web": "react-scripts eject",
 		"start:app": "node node_modules/react-native/local-cli/cli.js start",
-		"test:app": "react-scripts test --testMatch '<rootDir>/__tests__/native/**/*.js?(x)'",
+		"test:app": "jest --preset=react-native --testMatch='<rootDir>/__tests__/native/**/*.js?(x)'",
 		"eject:app": "rm -rf ./android && rm -rf ./ios && react-native eject",
 		"ios": "react-native run-ios",
 		"ios:bundle": "react-native bundle --dev false --entry-file index.js --bundle-output ios/main.jsbundle --platform ios",
@@ -42,6 +41,20 @@
 	"devDependencies": {
 		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "4.0.0",
+		"jest": "^21.2.1",
 		"react-test-renderer": "16.0.0-beta.5"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+      "jsx",
+      "js",
+      "json"
+    ],
+		"setupFiles": [
+      "<rootDir>/__tests__/setupTests.js"
+    ],
+		"transformIgnorePatterns": [
+			"node_modules/(?!react-native|react-router-native)/"
+		]
 	}
 }

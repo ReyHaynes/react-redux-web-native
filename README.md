@@ -26,7 +26,7 @@ This is a `node` based build app so having node installed is an obvious requirem
 ### Issues / Gotchas
 
 ###### Testing
-Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders. Code might to be refactored for the fix.
+Unfortunately, since the testing environments are different for native and web, and there's no real way for jest to interpret the difference from web and native renders. Any testing you would like to do must be done within `__tests__/<native/web>` directories.
 
 ###### File Naming
 You will want to separate presentational containers (anything with `render()` for the most part). Since there is no graceful way to determine native and web platform and there is no `.web.js` file extension, presentational containers for the Web should be under the main `.js` file while Native should be under `.ios.js` and `.android.js`.
@@ -82,8 +82,8 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 - [x] Merge `create-react-app` & `react-native`
 - [x] Create Sample App
 - [x] Implement Redux sample action and reducer
+- [x] Unit testing
 - [ ] Create sample action buttons
-- [ ] Unit testing
 
 ### Contribute
 
