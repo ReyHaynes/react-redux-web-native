@@ -15,10 +15,10 @@ export default class SampleView extends React.Component {
 
 const styles = {
   container: {
-    'min-height': '100vh',
-    'text-align': 'center',
-    'display': 'flex',
-    'justify-content': 'center',
-    'align-items': 'center'
+    minHeight: '100vh',
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 }
