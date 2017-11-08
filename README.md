@@ -11,9 +11,11 @@ The goal of this build is to create a react web and native app using a shared co
 
 2. (Optional) Rename your app in the `app.json` file.
 
-3. Install dependencies with `yarn install` or `npm install`. This will also do a `react-native eject` to generate the `/ios` & `/android` folders.
+3. Install dependencies with `yarn install` or `npm install`.
 
-4. Code the greatest app of all time.
+4. Build the `/ios` and `/android` native files with `yarn eject:app`
+
+5. Code the greatest app of all time. 🤔
 
 ### Requirements
 
