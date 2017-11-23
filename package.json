@@ -16,7 +16,7 @@
 		"build": "echo '\"build\" script has been replaced with \"build:web\"'",
 		"eject": "echo '\"eject\" script has been replaced with \"eject:web\" & \"eject:app\"'",
 		"test": "yarn test:web && yarn test:app",
-		"start:web": "react-scripts start",
+		"web": "react-scripts start",
 		"build:web": "react-scripts build",
 		"test:web": "jest --env=jsdom  --testMatch='<rootDir>/__tests__/web/**/*.js?(x)'",
 		"eject:web": "react-scripts eject",

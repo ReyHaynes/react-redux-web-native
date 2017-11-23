@@ -60,7 +60,7 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 | install | Install dependencies and (re)build `/ios` & `/android` directories. |
 | test | Run tests in `/__tests__` directory. |
 | | |
-| start:web | Start React Web |
+| web | Start React Web |
 | build:web | Generate build for React Web |
 | test:web | Run test watcher for React Web from `/__tests__/web` directory. |
 | eject:web | Eject `create-react-app` for custom React Web |
@@ -82,11 +82,12 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 
 ### Progress:
 - [x] Merge `create-react-app` & `react-native`
-- [x] Create Sample App
-- [x] Implement Redux sample action and reducer
+- [x] Create Sample App (Web & Native)
+- [x] Implement Redux sample Action and Reducer
 - [x] Unit testing
 - [x] Data Storage via `redux-persist`
 - [ ] Create sample action buttons
+- [ ] Add Electron (Desktop App Build)
 
 ### Contribute
 
