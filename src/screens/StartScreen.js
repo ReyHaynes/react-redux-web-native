@@ -41,7 +41,7 @@ class StartScreen extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    actions: state.SampleReducer
+    actions: state.sample
 })
 
 export default connect(mapStateToProps)(StartScreen);
