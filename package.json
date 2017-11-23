@@ -2,8 +2,15 @@
 	"name": "app-react-web-native",
 	"version": "0.0.1",
 	"description": "Merged React & React Native Build Scripts",
-	"author": "Reinaldo Haynes <reinaldo@hedgeable.com>",
-	"private": true,
+	"author": "Reinaldo Haynes (https://github.com/ReyHaynes)",
+	"homepage": "https://github.com/ReyHaynes/react-redux-web-native",
+	"license": {
+		"type": "MIT",
+		"url": "https://github.com/ReyHaynes/react-redux-web-native/blob/master/LICENSE"
+	},
+	"bugs": {
+		"url": "https://github.com/ReyHaynes/react-redux-web-native/issues"
+	},
 	"scripts": {
 		"start": "echo '\"start\" script has been replaced with \"start:web\" & \"start:app\"'",
 		"build": "echo '\"build\" script has been replaced with \"build:web\"'",
@@ -16,6 +23,7 @@
 		"start:app": "node node_modules/react-native/local-cli/cli.js start",
 		"test:app": "jest --preset=react-native --testMatch='<rootDir>/__tests__/native/**/*.js?(x)'",
 		"eject:app": "rm -rf ./android && rm -rf ./ios && react-native eject",
+		"link:app": "react-native link",
 		"ios": "react-native run-ios",
 		"ios:bundle": "react-native bundle --dev false --entry-file index.js --bundle-output ios/main.jsbundle --platform ios",
 		"ios:build": "react-native run-ios --configuration Release",
@@ -35,6 +43,7 @@
 		"react-router-native": "^4.2.0",
 		"react-scripts": "^1.0.14",
 		"redux": "^3.7.2",
+		"redux-persist": "^5.4.0",
 		"redux-promise": "^0.5.3",
 		"redux-thunk": "^2.2.0"
 	},
@@ -46,13 +55,13 @@
 	},
 	"jest": {
 		"moduleFileExtensions": [
-      "jsx",
-      "js",
-      "json"
-    ],
+			"jsx",
+			"js",
+			"json"
+		],
 		"setupFiles": [
-      "<rootDir>/__tests__/setupTests.js"
-    ],
+			"<rootDir>/__tests__/setupTests.js"
+		],
 		"transformIgnorePatterns": [
 			"node_modules/(?!react-native|react-router-native)/"
 		]

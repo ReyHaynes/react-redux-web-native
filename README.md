@@ -85,6 +85,7 @@ Commands can be executed with `yarn <options>` or `npm run <options>`
 - [x] Create Sample App
 - [x] Implement Redux sample action and reducer
 - [x] Unit testing
+- [ ] Storage via `redux-persist`
 - [ ] Create sample action buttons
 
 ### Contribute
