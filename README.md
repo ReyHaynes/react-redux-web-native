@@ -92,6 +92,8 @@ If you *eject* your app, please remember to re-link your native code again.
 ###### Shouldn't I commit the `/ios` & `/android` directories?
 You absolutely should. It's a good idea to remove the `.gitignore` for
 
+###### Why is Expo not included?
+[Expo](https://expo.io) is a great tool and I highly suggest you take a look at it, or even [integrate](https://github.com/expo/xde#converting-an-existing-project-to-work-with-expo) if it suits your project, but...unfortunately some of Expo's deficiencies were deal breakers (https://docs.expo.io/versions/latest/introduction/why-not-expo.html).
 
 ### Additional Options
 
