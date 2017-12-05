@@ -4,7 +4,6 @@ import store, { persistor } from "./storage"
 import { PersistGate } from 'redux-persist/es/integration/react'
 import { Router, Route } from './routing'
 
-import { Container } from './web_native/components'
 import StartScreen from './screens/StartScreen'
 
 export default class App extends React.Component {

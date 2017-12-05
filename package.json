@@ -11,6 +11,20 @@
 	"bugs": {
 		"url": "https://github.com/ReyHaynes/react-redux-web-native/issues"
 	},
+	"main": "src/index.electron.js",
+	"jest": {
+		"moduleFileExtensions": [
+			"jsx",
+			"js",
+			"json"
+		],
+		"setupFiles": [
+			"<rootDir>/__tests__/setupTests.js"
+		],
+		"transformIgnorePatterns": [
+			"node_modules/(?!react-native|react-router-native)/"
+		]
+	},
 	"scripts": {
 		"start": "echo '\"start\" script has been replaced with \"web:start\" & \"app:start\"'",
 		"build": "echo '\"build\" script has been replaced with \"web:build\"'",
@@ -20,6 +34,7 @@
 		"web:build": "react-scripts build",
 		"web:test": "jest --env=jsdom  --testMatch='<rootDir>/__tests__/web/**/*.js?(x)'",
 		"web:eject": "react-scripts eject",
+		"desktop:start": "electron .",
 		"app:start": "node node_modules/react-native/local-cli/cli.js start",
 		"app:test": "jest --preset=react-native --testMatch='<rootDir>/__tests__/native/**/*.js?(x)'",
 		"app:eject": "rm -rf ./android && rm -rf ./ios && react-native eject",
@@ -50,20 +65,8 @@
 	"devDependencies": {
 		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "4.0.0",
+		"electron": "^1.7.9",
 		"jest": "^21.2.1",
 		"react-test-renderer": "16.0.0-beta.5"
-	},
-	"jest": {
-		"moduleFileExtensions": [
-			"jsx",
-			"js",
-			"json"
-		],
-		"setupFiles": [
-			"<rootDir>/__tests__/setupTests.js"
-		],
-		"transformIgnorePatterns": [
-			"node_modules/(?!react-native|react-router-native)/"
-		]
 	}
 }
