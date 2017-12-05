@@ -6,6 +6,26 @@ The goal of this build is to create a react web and native app using a shared co
 ![App Preview](https://i.imgur.com/vyLoIxd.png)
 
 ### Quick Start
+```
+git clone git@github.com:ReyHaynes/react-redux-web-native.git
+cd react-redux-web-native
+rm -rf .git
+yarn install
+yarn app:eject
+```
+
+```
+# Run Web App
+yarn web:start
+
+# Run iOS App
+yarn ios:start
+
+# Run Android App
+yarn android:start
+```
+
+### Detailed Start
 
 1. Clone this repo:  
 `git clone git@github.com:ReyHaynes/react-redux-web-native.git <AppNameHere>`
@@ -22,7 +42,7 @@ rm -rf .git
 
 5. Build the `/ios` and `/android` native files with `yarn app:eject`
 
-6. Run developing environments.
+6. Run web and native apps.
 ```
 yarn web:start
 yarn ios:start
