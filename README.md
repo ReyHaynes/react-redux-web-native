@@ -9,7 +9,6 @@ The goal of this build is to create a react web and native app using a shared co
 ```
 git clone git@github.com:ReyHaynes/react-redux-web-native.git
 cd react-redux-web-native
-rm -rf .git
 yarn install
 yarn app:eject
 ```
@@ -25,15 +24,16 @@ yarn ios:start
 yarn android:start
 ```
 
-### Detailed Start
+### A More Detailed Start
 
 1. Clone this repo:  
 `git clone git@github.com:ReyHaynes/react-redux-web-native.git <AppNameHere>`
 
-2. `cd` into project and remove the `.git` folder and create your own repo.
+2. `cd` into project and remove the `.git` folder and create your own repo with `git init`.
 ```
 cd <AppNameHee>
 rm -rf .git
+git init
 ```
 
 3. Rename your app in the `app.json` file.
